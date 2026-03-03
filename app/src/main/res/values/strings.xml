@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ihc_androidv2</string>
+    <string name="ihc">Intelligent\nHome\nControl</string>"
+    <string name="helper_sn">Introduceți codul SN\n pentru a vă inregistra!</string>
+    <string name="helper_create_login">Este necesar să vă creeați un utilizator\n și o parolă pentru a putea utiliza aplicația!</string>
+    <string name="helper_login">Introduceți utilizatorul și parola.</string>
+    <string name="creeazacont">Creează contul!</string>
+</resources>

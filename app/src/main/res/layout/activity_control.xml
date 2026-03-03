@@ -1,0 +1,1615 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF506477"
+    tools:context=".Control">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/middleConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#FF506477"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/CL_mainControl"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.1">
+
+            <HorizontalScrollView
+                android:id="@+id/scrollBar_toate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="#88FFFFFF"
+                android:orientation="horizontal"
+                android:scrollbars="none"
+                android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@id/scroll_control"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/LinearLayout_toate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    tools:visibility="visible">
+
+                    <Button
+                        android:id="@+id/btn_main_toate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/buton_transparent"
+                        android:text="Toate"
+                        android:textColor="#BB000000"
+                        android:textSize="18sp"
+                        android:textStyle="italic">
+
+                    </Button>
+
+                    <Button
+                        android:id="@+id/btn_main_exterior"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/buton_transparent"
+                        android:text="Exterior"
+                        android:textColor="#BB000000"
+                        android:textSize="18dp"
+                        android:textStyle="italic">
+
+                    </Button>
+
+                    <Button
+                        android:id="@+id/btn_main_parter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/buton_transparent"
+                        android:text="Parter"
+                        android:textColor="#BB000000"
+                        android:textSize="18sp"
+                        android:textStyle="italic">
+
+                    </Button>
+
+                    <Button
+                        android:id="@+id/btn_main_etaj"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/buton_transparent"
+                        android:text="Etaj"
+                        android:textColor="#BB000000"
+                        android:textSize="18sp"
+                        android:textStyle="italic" />
+
+                    <Button
+                        android:id="@+id/btn_main_subsol"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/buton_transparent"
+                        android:text="Subsol"
+                        android:textColor="#BB000000"
+                        android:textSize="18dp"
+                        android:textStyle="italic">
+
+                    </Button>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <HorizontalScrollView
+                android:id="@+id/scrollView_parter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:background="#60FFFFFF"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@id/scroll_control"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scrollBar_toate"
+                tools:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/LinearLayout_parter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    tools:visibility="visible">
+
+                    <Button
+                        android:id="@+id/btn_parter_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/buton_transparent"
+                        android:text="Parter1"
+                        android:textColor="#BB000000"
+                        android:textSize="15sp"
+                        android:textStyle="normal"
+                        tools:visibility="visible">
+
+                    </Button>
+
+                    <Button
+                        android:id="@+id/btn_parter_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/buton_transparent"
+                        android:text="Parter2"
+                        android:textColor="#BB000000"
+                        android:textSize="15sp"
+                        android:textStyle="normal"
+                        tools:visibility="visible">
+
+                    </Button>
+
+                    <Button
+                        android:id="@+id/btn_parter_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/buton_transparent"
+                        android:text="Parter3"
+                        android:textColor="#BB000000"
+                        android:textSize="15sp"
+                        android:textStyle="normal"
+                        tools:visibility="visible">
+
+                    </Button>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <HorizontalScrollView
+                android:id="@+id/scrollView_exterior"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="#60FFFFFF"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@id/scroll_control"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/scrollBar_toate"
+                tools:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/LinearLayout_exterior"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    tools:visibility="visible">
+
+                    <Button
+                        android:id="@+id/btn_exterior_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/buton_transparent"
+                        android:text="ext1"
+                        android:textColor="#BB000000"
+                        android:textSize="15sp"
+                        android:textStyle="normal">
+
+                    </Button>
+
+                    <Button
+                        android:id="@+id/btn_exterior_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/buton_transparent"
+                        android:text="exteriorr2"
+                        android:textColor="#BB000000"
+                        android:textSize="15sp"
+                        android:textStyle="normal">
+
+                    </Button>
+
+                    <Button
+                        android:id="@+id/btn_exterior_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/buton_transparent"
+                        android:text="exteriorr3"
+                        android:textColor="#BB000000"
+                        android:textSize="15sp"
+                        android:textStyle="normal">
+
+                    </Button>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
+            <ScrollView
+                android:id="@+id/scroll_control"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/scrollBar_toate"
+                app:layout_constraintVertical_bias="1.0"
+                tools:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/linearlayout_CONTROL"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    tools:visibility="visible">
+
+
+                    <LinearLayout
+                        android:id="@+id/linearlayout_CTRL_TOATE"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="visible"
+                        tools:visibility="visible">
+
+                        <LinearLayout
+                            android:id="@+id/linearlayout_toate1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:visibility="visible"
+                            tools:visibility="visible">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/cv_1"
+                                android:layout_width="150dp"
+                                android:layout_height="110dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_weight="1"
+
+                                android:orientation="horizontal"
+                                android:visibility="visible"
+                                app:cardBackgroundColor="#DEffffff"
+                                app:cardCornerRadius="30dp"
+                                app:cardElevation="5dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.51"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:visibility="visible">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/cl_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:id="@+id/textView_releu1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="releu1"
+                                        android:textSize="30sp"
+                                        android:textColor="#000000"
+                                        app:layout_constraintBottom_toTopOf="@+id/img_conectat"
+                                        app:layout_constraintEnd_toStartOf="@+id/switch_releu1"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                                    <ImageView
+                                        android:id="@+id/imageView_releu1_on"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:scaleX="1.5"
+                                        android:scaleY="1.5"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.891"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.192"
+                                        app:srcCompat="@mipmap/lighton" />
+
+                                    <com.google.android.material.materialswitch.MaterialSwitch
+                                        android:id="@+id/switch_releu1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:checked="true"
+                                        android:scaleX="1.2"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.89"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.907"
+                                        app:thumbTint="@color/switch_thumb_color"
+                                        app:trackTint="@color/switch_track_color"
+                                        app:useMaterialThemeColors="false" />
+
+                                    <TextView
+                                        android:id="@+id/txtOnline"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:text="Conectat"
+                                        android:textSize="10sp"
+                                        android:textColor="#000000"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.248"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.927" />
+
+                                    <ImageView
+                                        android:id="@+id/img_conectat"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:background="@drawable/conectat"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.096"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.942" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/cv_2"
+                                android:layout_width="150dp"
+                                android:layout_height="110dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_weight="1"
+
+                                android:orientation="horizontal"
+                                android:visibility="visible"
+                                app:cardBackgroundColor="#DEffffff"
+                                app:cardCornerRadius="30dp"
+                                app:cardElevation="5dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.51"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:visibility="visible">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/cl_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:id="@+id/textView_releu2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="releu2"
+                                        android:textSize="30sp"
+                                        android:textColor="#000000"
+                                        app:layout_constraintBottom_toTopOf="@+id/img_conectat2"
+                                        app:layout_constraintEnd_toStartOf="@+id/switch_releu2"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                                    <ImageView
+                                        android:id="@+id/imageView_releu2_on"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:scaleX="1.5"
+                                        android:scaleY="1.5"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.891"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.192"
+                                        app:srcCompat="@mipmap/lighton" />
+
+                                    <com.google.android.material.materialswitch.MaterialSwitch
+                                        android:id="@+id/switch_releu2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:checked="true"
+                                        android:scaleX="1.2"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.89"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.907"
+                                        app:thumbTint="@color/switch_thumb_color"
+                                        app:trackTint="@color/switch_track_color"
+                                        app:useMaterialThemeColors="false" />
+
+                                    <TextView
+                                        android:id="@+id/txtOnline2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:text="Conectat"
+                                        android:textSize="10sp"
+                                        android:textColor="#000000"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.248"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.927" />
+
+                                    <ImageView
+                                        android:id="@+id/img_conectat2"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:background="@drawable/conectat"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.096"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.942" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearlayout_toate2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:visibility="visible"
+                            tools:visibility="visible">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/cv_3"
+                                android:layout_width="150dp"
+                                android:layout_height="110dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_weight="1"
+
+                                android:orientation="horizontal"
+                                android:visibility="visible"
+                                app:cardBackgroundColor="#DEffffff"
+                                app:cardCornerRadius="30dp"
+                                app:cardElevation="5dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.51"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:visibility="visible">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/cl_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:id="@+id/textView_releu3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="releu3"
+                                        android:textColor="#000000"
+                                        android:textSize="30sp"
+                                        app:layout_constraintBottom_toTopOf="@+id/img_conectat3"
+                                        app:layout_constraintEnd_toStartOf="@+id/switch_releu3"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"></TextView>
+                                    <ImageView
+                                        android:id="@+id/imageView_releu3_on"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:scaleX="1.5"
+                                        android:scaleY="1.5"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.891"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.192"
+                                        app:srcCompat="@mipmap/lighton" />
+
+                                    <com.google.android.material.materialswitch.MaterialSwitch
+                                        android:id="@+id/switch_releu3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:checked="true"
+                                        android:scaleX="1.2"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.89"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.907"
+                                        app:thumbTint="@color/switch_thumb_color"
+                                        app:trackTint="@color/switch_track_color"
+                                        app:useMaterialThemeColors="false" />
+
+                                    <TextView
+                                        android:id="@+id/txtOnline3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:text="Conectat"
+                                        android:textSize="10sp"
+                                        android:textColor="#000000"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.248"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.927" />
+
+                                    <ImageView
+                                        android:id="@+id/img_conectat3"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:background="@drawable/conectat"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.096"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.942" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/cv_4"
+                                android:layout_width="150dp"
+                                android:layout_height="110dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_weight="1"
+
+                                android:orientation="horizontal"
+                                android:visibility="visible"
+                                app:cardBackgroundColor="#DEffffff"
+                                app:cardCornerRadius="30dp"
+                                app:cardElevation="5dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.51"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:visibility="visible">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/cl_4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:id="@+id/textView_releu4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="releu4"
+                                        android:textColor="#000000"
+                                        android:textSize="30sp"
+                                        app:layout_constraintBottom_toTopOf="@+id/img_conectat4"
+                                        app:layout_constraintEnd_toStartOf="@+id/switch_releu4"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+
+                                    <ImageView
+                                        android:id="@+id/imageView_releu4_on"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:scaleX="1.5"
+                                        android:scaleY="1.5"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.891"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.192"
+                                        app:srcCompat="@mipmap/lighton" />
+
+                                    <com.google.android.material.materialswitch.MaterialSwitch
+                                        android:id="@+id/switch_releu4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:checked="true"
+                                        android:scaleX="1.2"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.89"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.907"
+                                        app:thumbTint="@color/switch_thumb_color"
+                                        app:trackTint="@color/switch_track_color"
+                                        app:useMaterialThemeColors="false" />
+
+                                    <TextView
+                                        android:id="@+id/txtOnline4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:text="Conectat"
+                                        android:textSize="10sp"
+                                        android:textColor="#000000"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.248"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.927" />
+
+                                    <ImageView
+                                        android:id="@+id/img_conectat4"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:background="@drawable/conectat"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.096"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.942" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearlayout_toate3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:visibility="visible"
+                            tools:visibility="visible">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/cv_5"
+                                android:layout_width="150dp"
+                                android:layout_height="110dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_weight="1"
+
+                                android:orientation="horizontal"
+                                android:visibility="visible"
+                                app:cardBackgroundColor="#DEffffff"
+                                app:cardCornerRadius="30dp"
+                                app:cardElevation="5dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.51"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:visibility="visible">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/cl_5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:id="@+id/textView_releu5"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="releu5"
+                                        android:textColor="#000000"
+                                        android:textSize="30sp"
+                                        app:layout_constraintBottom_toTopOf="@+id/img_conectat5"
+                                        app:layout_constraintEnd_toStartOf="@+id/switch_releu5"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                                    <ImageView
+                                        android:id="@+id/imageView_releu5_on"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:scaleX="1.5"
+                                        android:scaleY="1.5"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.891"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.192"
+                                        app:srcCompat="@mipmap/lighton" />
+
+                                    <com.google.android.material.materialswitch.MaterialSwitch
+                                        android:id="@+id/switch_releu5"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:checked="true"
+                                        android:scaleX="1.2"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.89"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.907"
+                                        app:thumbTint="@color/switch_thumb_color"
+                                        app:trackTint="@color/switch_track_color"
+                                        app:useMaterialThemeColors="false" />
+
+                                    <TextView
+                                        android:id="@+id/txtOnline5"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:text="Conectat"
+                                        android:textSize="10sp"
+                                        android:textColor="#000000"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.248"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.927" />
+
+                                    <ImageView
+                                        android:id="@+id/img_conectat5"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:background="@drawable/conectat"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.096"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.942" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/cv_6"
+                                android:layout_width="150dp"
+                                android:layout_height="110dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_weight="1"
+
+                                android:orientation="horizontal"
+                                android:visibility="visible"
+                                app:cardBackgroundColor="#DEffffff"
+                                app:cardCornerRadius="30dp"
+                                app:cardElevation="5dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.51"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:visibility="visible">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/cl_6"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:id="@+id/textView_releu6"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="releu6"
+                                        android:textColor="#000000"
+                                        android:textSize="30sp"
+                                        app:layout_constraintBottom_toTopOf="@+id/img_conectat6"
+                                        app:layout_constraintEnd_toStartOf="@+id/switch_releu6"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                                    <ImageView
+                                        android:id="@+id/imageView_releu6_on"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:scaleX="1.5"
+                                        android:scaleY="1.5"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.891"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.192"
+                                        app:srcCompat="@mipmap/lighton" />
+
+                                    <com.google.android.material.materialswitch.MaterialSwitch
+                                        android:id="@+id/switch_releu6"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:checked="true"
+                                        android:scaleX="1.2"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.89"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.907"
+                                        app:thumbTint="@color/switch_thumb_color"
+                                        app:trackTint="@color/switch_track_color"
+                                        app:useMaterialThemeColors="false" />
+
+                                    <TextView
+                                        android:id="@+id/txtOnline6"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:text="Conectat"
+                                        android:textSize="10sp"
+                                        android:textColor="#000000"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.248"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.927" />
+
+                                    <ImageView
+                                        android:id="@+id/img_conectat6"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:background="@drawable/conectat"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.096"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.942" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearlayout_toate4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:visibility="visible"
+                            tools:visibility="visible">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/cv_7"
+                                android:layout_width="150dp"
+                                android:layout_height="110dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_weight="1"
+
+                                android:orientation="horizontal"
+                                android:visibility="visible"
+                                app:cardBackgroundColor="#DEffffff"
+                                app:cardCornerRadius="30dp"
+                                app:cardElevation="5dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.51"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:visibility="visible">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/cl_7"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:id="@+id/textView_releu7"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="releu7"
+                                        android:textColor="#000000"
+                                        android:textSize="30sp"
+                                        app:layout_constraintBottom_toTopOf="@+id/img_conectat7"
+                                        app:layout_constraintEnd_toStartOf="@+id/switch_releu7"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                                    <ImageView
+                                        android:id="@+id/imageView_releu7_on"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:scaleX="1.5"
+                                        android:scaleY="1.5"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.891"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.192"
+                                        app:srcCompat="@mipmap/lighton" />
+
+                                    <com.google.android.material.materialswitch.MaterialSwitch
+                                        android:id="@+id/switch_releu7"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:checked="true"
+                                        android:scaleX="1.2"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.89"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.907"
+                                        app:thumbTint="@color/switch_thumb_color"
+                                        app:trackTint="@color/switch_track_color"
+                                        app:useMaterialThemeColors="false" />
+
+                                    <TextView
+                                        android:id="@+id/txtOnline7"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:text="Conectat"
+                                        android:textSize="10sp"
+                                        android:textColor="#000000"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.248"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.927" />
+
+                                    <ImageView
+                                        android:id="@+id/img_conectat7"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:background="@drawable/conectat"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.096"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.942" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/cv_8"
+                                android:layout_width="150dp"
+                                android:layout_height="110dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_weight="1"
+
+                                android:orientation="horizontal"
+                                android:visibility="visible"
+                                app:cardBackgroundColor="#DEffffff"
+                                app:cardCornerRadius="30dp"
+                                app:cardElevation="5dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.51"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:visibility="visible">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/cl_8"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:id="@+id/textView_releu8"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="releu8"
+                                        android:textColor="#000000"
+                                        android:textSize="30sp"
+                                        app:layout_constraintBottom_toTopOf="@+id/img_conectat8"
+                                        app:layout_constraintEnd_toStartOf="@+id/switch_releu8"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                                    <ImageView
+                                        android:id="@+id/imageView_releu8_on"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:scaleX="1.5"
+                                        android:scaleY="1.5"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.891"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.192"
+                                        app:srcCompat="@mipmap/lighton" />
+
+                                    <com.google.android.material.materialswitch.MaterialSwitch
+                                        android:id="@+id/switch_releu8"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:checked="true"
+                                        android:scaleX="1.2"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.89"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.907"
+                                        app:thumbTint="@color/switch_thumb_color"
+                                        app:trackTint="@color/switch_track_color"
+                                        app:useMaterialThemeColors="false" />
+
+                                    <TextView
+                                        android:id="@+id/txtOnline8"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:text="Conectat"
+                                        android:textSize="10sp"
+                                        android:textColor="#000000"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.248"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.927" />
+
+                                    <ImageView
+                                        android:id="@+id/img_conectat8"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:background="@drawable/conectat"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.096"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.942" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearlayout_toate5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:visibility="visible"
+                            tools:visibility="visible">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/cv_9"
+                                android:layout_width="150dp"
+                                android:layout_height="110dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_weight="1"
+
+                                android:orientation="horizontal"
+                                android:visibility="visible"
+                                app:cardBackgroundColor="#DEffffff"
+                                app:cardCornerRadius="30dp"
+                                app:cardElevation="5dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.51"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:visibility="visible">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/cl_9"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:id="@+id/textView_releu9"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="releu9"
+                                        android:textColor="#000000"
+                                        android:textSize="30sp"
+                                        app:layout_constraintBottom_toTopOf="@+id/img_conectat9"
+                                        app:layout_constraintEnd_toStartOf="@+id/switch_releu9"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+
+                                    <ImageView
+                                        android:id="@+id/imageView_releu9_on"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:scaleX="1.5"
+                                        android:scaleY="1.5"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.891"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.192"
+                                        app:srcCompat="@mipmap/lighton" />
+
+                                    <com.google.android.material.materialswitch.MaterialSwitch
+                                        android:id="@+id/switch_releu9"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:checked="true"
+                                        android:scaleX="1.2"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.89"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.907"
+                                        app:thumbTint="@color/switch_thumb_color"
+                                        app:trackTint="@color/switch_track_color"
+                                        app:useMaterialThemeColors="false" />
+
+                                    <TextView
+                                        android:id="@+id/txtOnline9"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:text="Conectat"
+                                        android:textSize="10sp"
+                                        android:textColor="#000000"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.248"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.927" />
+
+                                    <ImageView
+                                        android:id="@+id/img_conectat9"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:background="@drawable/conectat"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.096"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.942" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/cv_10"
+                                android:layout_width="150dp"
+                                android:layout_height="110dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_weight="1"
+
+                                android:orientation="horizontal"
+                                android:visibility="visible"
+                                app:cardBackgroundColor="#DEffffff"
+                                app:cardCornerRadius="30dp"
+                                app:cardElevation="5dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.51"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:visibility="visible">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/cl_10"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:id="@+id/textView_releu10"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="releu10"
+                                        android:textColor="#000000"
+                                        android:textSize="30sp"
+                                        app:layout_constraintBottom_toTopOf="@+id/img_conectat10"
+                                        app:layout_constraintEnd_toStartOf="@+id/switch_releu10"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                                    <ImageView
+                                        android:id="@+id/imageView_releu10_on"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:scaleX="1.5"
+                                        android:scaleY="1.5"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.891"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.192"
+                                        app:srcCompat="@mipmap/lighton" />
+
+                                    <com.google.android.material.materialswitch.MaterialSwitch
+                                        android:id="@+id/switch_releu10"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:checked="true"
+                                        android:scaleX="1.2"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.89"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.907"
+                                        app:thumbTint="@color/switch_thumb_color"
+                                        app:trackTint="@color/switch_track_color"
+                                        app:useMaterialThemeColors="false" />
+
+                                    <TextView
+                                        android:id="@+id/txtOnline10"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:text="Conectat"
+                                        android:textSize="10sp"
+                                        android:textColor="#000000"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.248"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.927" />
+
+                                    <ImageView
+                                        android:id="@+id/img_conectat10"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:background="@drawable/conectat"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.096"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.942" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearlayout_toate6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:visibility="visible"
+                            tools:visibility="visible">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/cv_11"
+                                android:layout_width="150dp"
+                                android:layout_height="110dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_weight="1"
+
+                                android:orientation="horizontal"
+                                android:visibility="visible"
+                                app:cardBackgroundColor="#DEffffff"
+                                app:cardCornerRadius="30dp"
+                                app:cardElevation="5dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.51"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:visibility="visible">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/cl_11"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:id="@+id/textView_releu11"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="releu11"
+                                        android:textColor="#000000"
+                                        android:textSize="30sp"
+                                        app:layout_constraintBottom_toTopOf="@+id/img_conectat11"
+                                        app:layout_constraintEnd_toStartOf="@+id/switch_releu11"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                                    <ImageView
+                                        android:id="@+id/imageView_releu11_on"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:scaleX="1.5"
+                                        android:scaleY="1.5"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.891"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.192"
+                                        app:srcCompat="@mipmap/lighton" />
+
+                                    <com.google.android.material.materialswitch.MaterialSwitch
+                                        android:id="@+id/switch_releu11"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:checked="true"
+                                        android:scaleX="1.2"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.89"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.907"
+                                        app:thumbTint="@color/switch_thumb_color"
+                                        app:trackTint="@color/switch_track_color"
+                                        app:useMaterialThemeColors="false" />
+
+                                    <TextView
+                                        android:id="@+id/txtOnline11"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:text="Conectat"
+                                        android:textSize="10sp"
+                                        android:textColor="#000000"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.248"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.927" />
+
+                                    <ImageView
+                                        android:id="@+id/img_conectat11"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:background="@drawable/conectat"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.096"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.942" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/cv_12"
+                                android:layout_width="150dp"
+                                android:layout_height="110dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_weight="1"
+
+                                android:orientation="horizontal"
+                                android:visibility="visible"
+                                app:cardBackgroundColor="#DEffffff"
+                                app:cardCornerRadius="30dp"
+                                app:cardElevation="5dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.51"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:visibility="visible">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/cl_12"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:id="@+id/textView_releu12"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="releu12"
+                                        android:textColor="#000000"
+                                        android:textSize="30sp"
+                                        app:layout_constraintBottom_toTopOf="@+id/img_conectat12"
+                                        app:layout_constraintEnd_toStartOf="@+id/switch_releu12"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                                    <ImageView
+                                        android:id="@+id/imageView_releu12_on"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:scaleX="1.5"
+                                        android:scaleY="1.5"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.891"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.192"
+                                        app:srcCompat="@mipmap/lighton" />
+
+                                    <com.google.android.material.materialswitch.MaterialSwitch
+                                        android:id="@+id/switch_releu12"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:checked="true"
+                                        android:scaleX="1.2"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.89"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.907"
+                                        app:thumbTint="@color/switch_thumb_color"
+                                        app:trackTint="@color/switch_track_color"
+                                        app:useMaterialThemeColors="false" />
+
+                                    <TextView
+                                        android:id="@+id/txtOnline12"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:text="Conectat"
+                                        android:textSize="10sp"
+                                        android:textColor="#000000"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.248"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.927" />
+
+                                    <ImageView
+                                        android:id="@+id/img_conectat12"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:background="@drawable/conectat"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.096"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintVertical_bias="0.942" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"></LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"></LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout_parter1_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        tools:visibility="gone">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:id="@+id/parter1_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="TextView" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearlayout_exterior1_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        tools:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="EXTERIOR" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lowerConstrainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#E9000000"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/middleConstraintLayout"
+        tools:visibility="gone">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
